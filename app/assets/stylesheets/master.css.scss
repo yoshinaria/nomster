@@ -32,3 +32,10 @@ body {
   font-family: 'museo_sans500', sans-serif;
   font-size: 26px;
 }
+
+.has_error {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding:8px;
+}
