@@ -14,6 +14,7 @@ Nomster::Application.routes.draw do
     resources :photos, :only => :create
   end
 
+   resources :users, :only => :show
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
