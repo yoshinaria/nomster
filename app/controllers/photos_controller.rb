@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
 
 
   def photo_params
-    params.require(:photo).permit(:capture, :picture)
+    params.require(:photo).permit(:caption, :picture)
   end
 end
 
