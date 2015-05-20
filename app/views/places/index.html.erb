@@ -54,7 +54,7 @@
     
     <div class="photo-in-index-page col-sm-3">
      <% if place.photos.present? %> 
-        <%= link_to image_tag(place.photos.last.picture, :class => 'img-thumbnail index-image'), place_path(place)  %>
+        <%= link_to image_tag(place.photos.first.picture, :class => 'img-thumbnail index-image'), place_path(place)  %>
     <% end %>
     </div>
 
