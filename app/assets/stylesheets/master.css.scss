@@ -7,7 +7,7 @@
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
+  background: #f2f2f2;
   // border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top:10px;
@@ -16,20 +16,21 @@
 }
 
 body {
-  background: url('/assets/brillant.png');
-  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
+  background: url('/assets/background.jpg');
+  // font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  // background-color: black;
 }
 
 .navbar.navbar-inverse {
-  background:url('/assets/footer_lodyas.png');
+  // background:url('/assets/footer_lodyas.png');
+  background: rgba(0,0,0,0.5);
   border-radius: 0;
   box-shadow: 0px 1px 3px #2a2a2a;
   margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #E3E85A;
+  color: #BEB989;
   font-family: 'museo_sans500', sans-serif;
   font-size: 26px;
 }
@@ -68,9 +69,9 @@ blockquote p {
   display: inline;
 }
 
-button {
-  margin-left: 20px;
-}
+// button {
+//   margin: 20px;
+// }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     height: auto;
@@ -88,9 +89,38 @@ button {
     // left:0;
 }
 
+.photo img{
+      height: 150px;
+      width: 100%;
+}
+
+.photo-in-index-page img{
+    height:150px;
+    width: 100%;
+}
 
 
+.btn-primary {
+  color: white;
+  background-color: #847F56;
+  border-color: #847F56;
+}
 
+.btn-danger {
+  color: white;
+  background-color: #511917;
+  border-color: #6B2320;
+}
+
+
+a:hover, a:focus {
+  color: #2E353C;
+  text-decoration: none;
+}
+
+a {
+  color: #847F56;
+}
 
 
 
