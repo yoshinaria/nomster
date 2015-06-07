@@ -16,6 +16,11 @@ class Comment < ActiveRecord::Base
   end
 
   def send_comment_email
-      NotificationMailer.comment_added(self).deliver
+    NotificationMailer.comment_added(self).deliver
+  end
+
+  def number_of_stars
+    "*" * self.rating.to_i 
   end
 end
+
