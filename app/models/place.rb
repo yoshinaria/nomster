@@ -8,4 +8,8 @@ class Place < ActiveRecord::Base
   
   validates :name, :address, :description, :presence => true
   validates :name, length: { :minimum => 3, :maximum => 100 }
+
+  def self.search(search)
+    where('name LIKE ?', "%#{search}%")
+  end
 end

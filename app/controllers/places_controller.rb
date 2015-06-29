@@ -1,8 +1,18 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
+  # def index
+  #   # @places = Place.all.page(params[:page]).per(3)
+  #   @places = Place.search(params[:search])
+  # end
+
   def index
-    @places = Place.all.page(params[:page]).per(3)
+  @places = Place.search(params[:search])
+    if @places.class == Array
+      @places = Kaminari.paginate_array(@posts).page(params[:page]).per(3) 
+    else
+      @places = @places.page(params[:page]).per(3) # if @posts is AR::Relation object 
+    end
   end
 
   def new

@@ -40,6 +40,16 @@
 <!--map -->
 
 <div class="map-sidebar col-xs-12 col-sm-4 pull-right">
+
+  <!--search engine-->
+  <%= form_tag places_path, method:'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search], placeholder: 'Restaurant Name' %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+  <br>
+
   <h4>Best Pizzas in Chicago</h4>
   <br />
   <div id="map"></div>
@@ -48,6 +58,8 @@
   <h4>About Pizza De Chicago</h4>
   <br />
   <p>We list best pizza places in Chicago.  Please feel free to add your place in town!</p>
+
+
 </div>
 
 
@@ -124,8 +136,6 @@
         <% end %>
       </div>
   <% end %>
-
-
 
   
 
