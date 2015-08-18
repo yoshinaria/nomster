@@ -21,7 +21,6 @@ body {
   // font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   background-color: #f2f2f2;
   padding-top: 30px;
-
 }
 
 .navbar.navbar-inverse {
@@ -45,6 +44,10 @@ body {
   padding:8px;
 }
 
+.main {
+  padding: 20px 40px;
+}
+
 #map-canvas {
   height: 300px;
 }
@@ -60,6 +63,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -68,6 +72,7 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }
@@ -82,8 +87,8 @@ blockquote p {
 }
 
 .carousel-caption {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 60px;
+    font-family: 'museo_sans500', sans-serif;    
+    font-size: 40px;
     font-weight:100;
     text-shadow: rgba(0,0,0,0.95) 2px 2px;
     // background-color: rgba(0,0,0,0.5);
