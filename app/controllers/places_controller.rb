@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy, :upvote, :downvote]
 
   # def index
   #   # @places = Place.all.page(params[:page]).per(3)
@@ -66,6 +66,20 @@ class PlacesController < ApplicationController
     @place.destroy
     redirect_to root_path
   end
+
+
+  def upvote
+    @place = Place.find(params[:id])
+    @place.liked_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @place = Place.find(params[:id])
+    @place.downvote_from current_user
+    redirect_to :back
+  end
+
 
   private
 

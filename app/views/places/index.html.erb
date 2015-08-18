@@ -42,11 +42,11 @@
   <div class="map-sidebar col-xs-12 col-sm-4 pull-right">
 
     <!--search engine-->
-    <%= form_tag places_path, method:'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search], placeholder: 'Restaurant Name' %>
-        <%= submit_tag "Search", :name => nil %>
-      </p>
+    <%= form_tag places_path, method:'get', :class => 'form-inline' do %>
+      <div class = 'form-group'>
+        <%= text_field_tag :search, params[:search], placeholder: 'Restaurant Name', :class => 'form-control' %>
+        <%= submit_tag "Search", :name => nil, :class => 'btn btn-default' %>
+      </div>
     <% end %>
     <br>
 
@@ -113,6 +113,15 @@
             <small><%= place.user.email %></small>
           <% end %>
 
+          <div class='like-button'>
+            <button><%= link_to 'Upvote', like_place_path(place), method: :put%>
+            <%= place.get_upvotes.size %></button>
+        
+            <button><%= link_to 'Downvote', dislike_place_path(place), method: :put %>
+            <%= place.get_downvotes.size %></button>
+          </div>
+
+
           <br><br>
         </div>
         
@@ -121,6 +130,8 @@
             <%= link_to image_tag(place.photos.first.picture, :class => 'img-thumbnail index-image'), place_path(place)  %>
           <% end %>
         </div>
+
+
 
         <div class="clear"></div>
           <%if place.comments.present? %>
@@ -135,6 +146,9 @@
             </div>
           <% end %>
         </div>
+      
+
+        
     <% end %>
 
   

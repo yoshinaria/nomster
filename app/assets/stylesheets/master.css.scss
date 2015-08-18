@@ -45,7 +45,7 @@ body {
 }
 
 .main {
-  padding: 20px 40px;
+  padding: 2% 5%;
 }
 
 #map-canvas {
@@ -58,7 +58,7 @@ body {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #942F2F;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -122,6 +122,10 @@ blockquote p {
   border-color: #6B2320;
 }
 
+.btn-default {
+  background-color: black;
+  color: #BEB989;
+}
 
 a:hover, a:focus {
   color: #2E353C;
@@ -141,8 +145,13 @@ a {
   padding: 40px 30px;
 }
 
+.like-button {
+  float: right;
+}
 
-
+button {
+  border-radius: 3px;
+}
 
 
 
