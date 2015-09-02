@@ -114,10 +114,10 @@
           <% end %>
 
           <div class='like-button'>
-            <button><%= link_to 'Upvote', like_place_path(place), method: :put%>
+            <button><%= link_to 'I like it', like_place_path(place), method: :put%>
             <%= place.get_upvotes.size %></button>
         
-            <button><%= link_to 'Downvote', dislike_place_path(place), method: :put %>
+            <button><%= link_to 'Unlike', dislike_place_path(place), method: :put %>
             <%= place.get_downvotes.size %></button>
           </div>
 
